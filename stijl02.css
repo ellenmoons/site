@@ -1,0 +1,137 @@
+body{
+	margin: 0;
+	padding:0;
+	font-family: helvetica;
+	width: 100%;
+	height: 150vw;
+	background-image: linear-gradient(white, #F7DCDC);
+
+}
+.menu {
+	float: right;
+	margin: 0;
+	margin-right: 3rem;
+	height: 6rem;
+	padding: 4px;
+	padding:40px	10px	20px	10px;
+}
+
+/*Navigatiebalk*/
+h1{
+	font-size: 2rem;
+	position:  absolute;
+	height: 100px;
+	padding:20px	10px	20px	10px;
+
+}
+
+.navi{
+	display: none;
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	float: right;
+
+	background-image: url("afb/afb1.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	animation-name: omlaag;
+	animation-duration: 2s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+
+}
+ .navi	a{
+	text-decoration: none;
+	line-height: 80px;
+	padding: 12px	30px;
+	color: black;
+}
+
+
+/*lay out*/
+main img {
+	max-width: 30%;
+	margin: 7rem;
+	display: flex;
+	float: left;
+	border: 20px	solid white;
+
+	animation-name: change;
+	animation-duration: 5s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: 1;
+	animation-delay: 0.5s;
+
+}
+
+main {
+	column-count: 0;
+}
+
+h3{
+	padding: 5rem;
+
+}
+
+@keyframes change {
+	0%{
+		transform: translate(100vw,0vw);
+		opacity: 0;
+	}
+	100%{
+		transform: translate(0,0vw);
+		opacity: 1s
+	}
+}
+
+@media (min-width: 990px) {
+	.navi {
+		display: block ;
+
+		background-color: #93d8cb;
+		width: 10vw;
+		height:150vw;
+		position: relative;
+		top: 0;
+		right: 0;
+		padding: 5rem;
+		flex-direction: column;
+
+		animation-name: omlaagB;
+		animation-duration: 2s;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: 1;
+		opacity: 0.75;
+
+	}
+
+	h3{
+		padding: 20rem;
+	}
+.navi a:nth-child(2){
+	font-size: 2rem;
+	color: white;
+	}
+
+		@keyframes omlaagB {
+		  0%{
+		    transform: translate(-100vw,0vw);
+				opacity: 0;
+		  }
+		  100%{
+		    transform: translate(0,0vw);
+				opacity: 1s
+		  }
+		}
+
+  }
+@media (min-width: 1300px) {
+	main .photos {
+		column-count: 3;
+		column-gap: 5vw;
+	}
+}
